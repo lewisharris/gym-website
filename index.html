@@ -6,18 +6,35 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+
+	<div id="menuoverlay">
+			<div id='openmenu'>
+				<ul>
+					<li><a href="#">MEMBERSHIP</a></li>
+					<li><a href="#">FACILITIES</a></li>
+					<li><a href="#">PERSONAL TRAINING</a></li>
+					<li><a href="#">CLASSES</a></li>
+					<li><a href="#">MEDIA</a></li>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
+			</div>
+			<div id="overlay"></div>
+	</div>
+
 	<header>
 		<h1>MAIN STREET GYM.</h1>
 		<h3>RESULTS THAT MATTER.</h3>
-		<input id="searchbar" type="text" name="search" placeholder="Search.."> 
-		<button></button>
+		<div id='searchbarposition'>
+			<div id="searchbarcontainer">
+				<input id="searchbar" type="text" name="search" placeholder="Search.."> 
+				<button id="searchbutton">GO</button>
+			</div>
+		</div>
 		<ul id="navbar">
 			<li><a href="#">MEMBERSHIP</a></li>
 			<li><a href="#">FACILITIES</a></li>
 			<li><a href="#">PERSONAL TRAINING</a></li>
-			<li><a href="#">CLASSES</a></li>
 			<li><a href="#">MEDIA</a></li>
-			<li><a href="#">CONTACT</a></li>
 			<li class="hamburgerContainer">
 				<div class="hamburger"></div>
 				<div class="hamburger"></div>
@@ -25,7 +42,6 @@
 			</li>
 		</ul>
 	</header>
-
 
 	<div class="container">
 		<div id="showcase">
@@ -89,6 +105,8 @@
 
 		</ul>
 	</footer>
+
+
 
 	<script type="text/javascript" src="JS/main.js"></script>
 
