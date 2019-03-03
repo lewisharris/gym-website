@@ -18,7 +18,7 @@ header{
 
 header h1 {
 	font-family: "HelveticaNeue-CondensedBold",helvetica,arial,sans-serif;
-	color: #454545;
+	color: #262626;
 	font-size:48px;
 	padding-left:50px;
 }
@@ -29,6 +29,25 @@ header h3 {
 	font-size: 24px;
 	font-weight: normal;
 	padding-left:50px;
+}
+
+#searchbar{
+	width:250px;
+	height:36px;
+	background:#f4f4f4;
+	float:right;
+	position: absolute;
+	top:63px;
+	right:3%;
+	padding: 0px 20px 0pc 0px ;
+	margin:0px;
+	border:none;
+	font-family: Helvetica Neue,helvetica,arial,sans-serif;
+	color: #B9B9B9;
+	font-size: 16px;
+	text-align: right;
+
+
 }
 
 #navbar{
@@ -73,21 +92,23 @@ header h3 {
 	transition: color 0.2s;
 }
 
-
-
-#navbar li #contact a:hover{
-	background-color:#fff;
-	color:#842F30;
-	transition: color 0.2s;
+.hamburgerContainer{
+	
 }
 
+.hamburger{
+	width:30px;
+	height:3px;
+	background: #262626;
+	margin:5px;
+}
 
 
 
 
 .container{
 	text-align: center;
-	margin:0;
+	margin:10px 0px 0px 0px;
 	position: relative;
 	height:442px;
 	overflow:hidden;
@@ -103,7 +124,7 @@ header h3 {
 #showcase img {
 	width:100%;
 	position: relative;
-	bottom:150px;
+	bottom:50px;
 }
 
 
@@ -174,7 +195,7 @@ header h3 {
 }
 
 .clickableContainer{
-	height:298px;
+	height:280px;
 	width:545px;
 	background: #F1F1F1;
 	overflow: hidden;
@@ -182,6 +203,7 @@ header h3 {
 	margin:36px 27px 36px 27px;
 	flex: 1 1 0px;
 	transition: background-color 0.5s;
+	cursor:pointer;
 }
 
 
@@ -194,6 +216,7 @@ header h3 {
 	flex: 1 1 0px;
 	background:#454545;
 	transition: background-color 0.5s;
+	cursor:pointer;
 }
 
 
@@ -209,10 +232,11 @@ header h3 {
 
 
 .clickableContainer .caption, .clickableContainerHover .caption{
-	font-size:24px;
+	font-size:100%;
 	font-family: "HelveticaNeue-CondensedBold",helvetica,arial,sans-serif;
 	color:#454545;
 	transition: background-color 0.5s;
+	margin-bottom:10px;
 }
 .clickableContainerHover .captionHover {
 	font-size:24px;
