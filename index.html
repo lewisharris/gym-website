@@ -4,22 +4,31 @@
 	<title>Main Street Gym</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+
 
 	<div id="menuoverlay">
 			<div id='openmenu'>
 				<ul>
-					<li><a href="#">MEMBERSHIP</a></li>
-					<li><a href="#">FACILITIES</a></li>
-					<li><a href="#">PERSONAL TRAINING</a></li>
-					<li><a href="#">CLASSES</a></li>
-					<li><a href="#">MEDIA</a></li>
+					<li><a id="closemenuicon" href="#">&times;</a></li>
+					<li><a href="members-zone.html">MEMBERS ZONE</a></li>
+					<li><a href="membership.html">MEMBERSHIP</a></li>
+					<li><a href="facilities.html">FACILITIES</a></li>
+					<li><a href="personal-training.html">PERSONAL TRAINING</a></li>
+					<li><a href="media.html.html">MEDIA</a></li>
+					<li><a href="book.html">BOOK A VISIT</a></li>					
+					<li><a href="faq.html">FAQ</a></li>
 					<li><a href="#">CONTACT</a></li>
 				</ul>
 			</div>
-			<div id="overlay"></div>
 	</div>
+	<div id="overlay"></div>
+
+
+
 
 	<header>
 		<h1>MAIN STREET GYM.</h1>
@@ -30,26 +39,46 @@
 				<button id="searchbutton">GO</button>
 			</div>
 		</div>
+		<span class="hamburgerContainer"><p class="hamburger">&#9776;</p></span>
 		<ul id="navbar">
-			<li><a href="#">MEMBERSHIP</a></li>
-			<li><a href="#">FACILITIES</a></li>
-			<li><a href="#">PERSONAL TRAINING</a></li>
-			<li><a href="#">MEDIA</a></li>
-			<li class="hamburgerContainer">
-				<div class="hamburger"></div>
-				<div class="hamburger"></div>
-				<div class="hamburger"></div>
-			</li>
+			<li><a href="membership.html">MEMBERSHIP</a></li>
+			<li><a href="facilities.html">FACILITIES</a></li>
+			<li><a href="personal-training.html">PERSONAL TRAINING</a></li>
+			<li><a href="media.html">MEDIA</a></li>
 		</ul>
 	</header>
 
 	<div class="container">
 		<div id="showcase">
-			<img src="images/tyre.jpeg">
-			<h1 class='imageheader'>'A NEW LEVEL OF FITNESS'</h1>
-			<p class="imagetext">Gym fitness magazine.</p>
+			<div class="slideImage">	
+						<img src="images/tyre.jpeg">
+						<h1 class='imageheader'>'A NEW LEVEL OF FITNESS'</h1>
+						<p class="imagetext">Gym fitness magazine.</p>
+			</div>
+			<div class="slideImage">	
+						<img src="images/ropes.jpeg">
+						<h1 class='imageheader'>'PERSONAL TRAINING WITH REAL RESULTS'</h1>
+						<p class="imagetext">Find out more</p>
+			</div>
+			<div class="slideImage">	
+						<img src="images/biceps.jpeg">
+						<h1 class='imageheader'>OUTSTANDING FACILITIES</h1>
+						<p class="imagetext">Never have your workout cut short</p>
+			</div>
+			<div class="slideImage">	
+						<img src="images/weights.jpeg">
+						<h1 class='imageheader'>HUGE MULTI ROOM WEIGHT AREA</h1>
+						<p class="imagetext">a weight room that you can't handle</p>
+			</div>
+			<div class="slideImage">	
+						<img src="images/athlete-crossfit-exercise-685533.jpeg">
+						<h1 class='imageheader'>NO JOINING FEE FOR MARCH</h1>
+						<p class="imagetext">Join now</p>
+			</div>
 		</div>
 	</div>
+	<button id="prevBtn">Prev</button>
+	<button id="nextBtn">Next</button>
 	<div id="circles">
 		<div class="circle"></div>
 		<div class="circle"></div>
