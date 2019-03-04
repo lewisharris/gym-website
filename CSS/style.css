@@ -14,6 +14,7 @@ body{
 	text-align: center;
 	box-sizing:border-box;
 	z-index:0;
+	box-sizing:border-box;
 }
 
 
@@ -21,24 +22,31 @@ body{
 
 
 #menuoverlay{
-	width:100%;
+	display: none;
 	height:100%;
 	position:absolute;
-	top:10px;
-	z-index: 1;
+	top:0;
+	right:0;
+	z-index: -1;
 	margin:0px auto;
 	overflow:hidden;
+	transform:translateX(-300px);
+	transition: transform 1000ms;
 }
 
-#menuoverlay .open{
+
+#menuoverlay.open{
 	width:100%;
+	display: block;
 	height:100%;
 	position: absolute;
 	top:0px;
 	left:0px;
-	z-index: 1;
+	z-index: 4;
 	margin:0px auto;
 	overflow:hidden;
+	transform:translateX(0px);
+	transition: transform 1000ms;
 }
 
 #overlay{
@@ -46,9 +54,22 @@ body{
 	width:100%;
 	height:100%;
 	margin:0px auto;
+	opacity:1;
+	z-index:-5;
+	position: fixed;
+	top:0;
+	left:50000;
+	transition:opacity 10ms linear;
+	transform:translateX(-10000px);
+	transition: translateX() 0.5s;
+}
+
+#overlay.open{ 
 	opacity:0.9;
-	z-index:1;
-	position: relative;
+	z-index:3;
+	transform:translateX(0px);
+	transition: translateX() 0.5s;
+
 }
 
 #openmenu{
@@ -56,10 +77,12 @@ body{
 	width: 100%;
 	height:300px;
 	margin:0px auto;
-	position: fixed;
+	position: relative;
 	top:10px;
-	right:30px;
+	right:50px;
 	text-align: right;
+	transform:translateX(00px);
+	transition: transform translateX() 2s;
 }
 
 #openmenu ul{
@@ -96,7 +119,7 @@ line-height: 1.8;
 
 
 header{
-	height:190px;
+	height:250px;
 	width: 100%;
 	background: #fff;
 	line-height: 0.3;
@@ -174,6 +197,7 @@ header h3 {
 	margin-right:20px;
 }
 
+
 #navbar li{
 	display: inline-block;
 	text-decoration: none;
@@ -202,27 +226,22 @@ header h3 {
 
 
 .hamburger{
-	width:24px;
-	height:2px;
-	background: #262626;
-	margin-top:5px;
-	margin-bottom:5px;
+	font-size:48px;
 	position: relative;
-	top:0px;
+margin-right:40px;
 
 
 }
 
 .hamburgerContainer{
-	height:24px;
-	position: relative;
-	top:15px;
-	cursor:pointer;
-	padding:0px;
-	margin:0px;
+margin:auto;
+position: relative;
+cursor:pointer;
+text-align: right;
+
 }
 
-.hamburgerContainerHover{
+.hamburgerContainerGone{
 	height:24px;
 	position: relative;
 	top:15px;
@@ -251,10 +270,15 @@ header h3 {
 	margin:0;
 }
 
+
 #showcase img {
 	width:100%;
 	position: relative;
 	bottom:50px;
+}
+
+.slideImage{
+		display:none;
 }
 
 
@@ -304,6 +328,7 @@ header h3 {
 	background: #D1D1D1;
 	float:left;
 	margin:3px;
+	 transition: background-color 0.6s ease;
 }
 
 .circle:hover{
@@ -354,7 +379,6 @@ header h3 {
 	height:227px;
 	width: 100%;
 	overflow: hidden;
-	overflow:hidden;
 }
 .clickableContainer .contentImage img,.clickableContainerHover .contentImage img{
 	width:100%;
@@ -408,3 +432,70 @@ footer ul li a:hover {
 	text-decoration: none;
 	transition: color 0.2s;
 }
+
+
+
+
+
+@media (max-width:768px){
+
+	#navbar{
+		display: none;
+	}
+
+	.container{
+		height:200px;
+	}
+
+	#showcase img {
+	width:100%;
+	position: relative;
+	bottom:25px;
+	}
+
+	#showcase .imageheader{
+		opacity:0;
+	}
+	#showcase .imagetext{
+			opacity:0;
+	}
+
+	#searchbarposition{
+	display: none;
+	}
+
+
+	header{
+		padding-top:36px;
+		height:80px;
+	}
+
+	header h1{
+	width:75%;
+	font-size: 24px;
+	line-height:1;
+	margin:0px;}
+
+	header h3{
+	width:75%;
+	font-size: 14px;
+	line-height:1;
+	margin:0px;}
+
+	.hamburgerContainer{
+		position: absolute;
+		float:right;
+		top:0px;
+		right: -20px;
+	}
+	.main-content{
+	width:100%;
+	margin:auto;
+	}
+	.circle{
+		width:10px;
+		height:10px;
+	}
+	#circles{
+		margin:10px auto 10px auto;
+	}
