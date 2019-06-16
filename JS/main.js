@@ -1,3 +1,9 @@
+/*BODY FADE IN - this makes the page load with a short fade
+  in (line of script at beginning of body tags in html)*/
+ document.addEventListener("DOMContentLoaded", function(e) {
+    document.body.className = '';
+  });
+
 
 
 //MenuToggle//
@@ -6,8 +12,6 @@ var hamburger = document.getElementsByClassName('hamburgerContainer')[0];
 var menuOverlay = document.getElementById('menuoverlay');
 var overlay = document.getElementById('overlay');
 var closeMenuIcon = document.getElementById('closemenuicon');
-
-
 
 
 
@@ -23,31 +27,11 @@ function menuToggle(){
 		overlay.className = "";
 	}
 };
-
 hamburger.addEventListener('click',menuToggle);
+
+
 closeMenuIcon.addEventListener('click', menuToggle);
 
-
-//Content
-
-var container = document.getElementsByClassName('clickableContainer')[0];
-var caption = document.getElementsByClassName('caption')[0];
-
-container.addEventListener('mouseover',function(){
-	if(container.className == 'clickableContainer'){
-	container.className = 'clickableContainerHover';
-	caption.className = 'captionHover';
-	}
-	else{
-		container.className = 'clickableContainer';
-		caption.className = 'caption';
-	}
-});
-
-container.addEventListener('mouseout',function(){
-		container.className = 'clickableContainer';
-		caption.className = 'caption';
-});
 
 //Slideshow//
 
