@@ -51,8 +51,8 @@ body.fade {
 }
 
 .hamburger:hover{
-	color:#686868;
-	transition: color 0.2s;
+	color:#842F30;
+	transition: color 0.4s;
 }
 
 
@@ -80,7 +80,7 @@ body.fade {
 	margin:0px auto;
 	overflow:hidden;
 	transform:translateX(800px);
-	transition: all 0.5s ease-in-out 0s;
+	display: none;
 }
 
 
@@ -95,7 +95,6 @@ body.fade {
 	margin:0px auto;
 	overflow:hidden;
 	transform:translateX(0px);
-	transition: all 0.5s ease-in-out 0.7s;
 }
 
 #overlay{
@@ -110,7 +109,7 @@ body.fade {
 	left:50000;
 	transition:opacity 10ms linear;
 	transform:translateX(10000px);
-	transition: all 1s ease-in-out 0s;
+
 }
 
 #overlay.open{ 
@@ -118,7 +117,6 @@ body.fade {
 	z-index:3;
 	transform:translateX(0px);
 	transition: translateX() 0.5s;
-	transition: all 1s ease-in-out 0s;
 
 }
 
@@ -132,7 +130,7 @@ body.fade {
 	right:50px;
 	text-align: right;
 	transform:translateX(00px);
-	transition: all 1s ease-in-out 0s;
+	transition: all 1s ease-in-out 1s;
 }
 
 #openmenu ul{
@@ -150,7 +148,7 @@ line-height: 1.8;
 	text-decoration: none;
 	list-style-type: none;
 	color:#f4f4f4;
-	-webkit-transition: color 0.5s;
+	-webkit-transition: color 0.3s;
 }
 
 #openmenu ul li a:hover{
@@ -159,7 +157,7 @@ line-height: 1.8;
 	list-style-type: none;
 	color:#842F30;
 	opacity: 1;
-	-webkit-transition: color 0.5s;
+	-webkit-transition: color 0.3s;
 }
 
 			/* HEADER AND NAVIGAITON */
@@ -225,8 +223,8 @@ nav{
 }
 
  #navbar li a:hover{
-	color:#C16F6F;
-	transition: color 0.2s;
+	color:#842F30;
+	transition: color 0.5s;
 }
 
 			/* MAIN CONTENT */
@@ -310,7 +308,7 @@ nav{
 	width:400px;
 	background: #F1F1F1;
 	text-align: center;
-	transition: background-color 0.5s;
+	transition: background-color 0.3s;
 	cursor:pointer;
 	position: relative;
 }
@@ -319,7 +317,7 @@ nav{
 .clickableContainer:hover{
 	background:#454545;
 	color:#F1F1F1;
-	transition: background-color 0.5s;
+	transition: background-color 0.3s;
 	cursor:pointer;
 }
 
@@ -344,12 +342,11 @@ nav{
 			/* ------FOOTER-----*/
 
 footer{
-	color:#F5F5F5;
+	color:#B9B9B9;
 	font-family: "HelveticaNeue-CondensedBold",helvetica,arial,sans-serif;
 	font-size:16px;
 	font-weight:lighter;
 	text-align: center;
-	background: #C16F6F;
 	width: 100%;
 	margin:0px auto;
 	height:50px;
@@ -364,7 +361,7 @@ footer ul li {
 }
 
 footer ul li a {
-	color:#fff;
+	color:#B9B9B9;
 	text-decoration: none;
 	transition: color 0.2s;
 }
@@ -372,7 +369,7 @@ footer ul li a {
 footer ul li a:hover {
 	color:#842F30;
 	text-decoration: none;
-	transition: color 0.2s;
+	transition: color 0.3s;
 }
 
 
@@ -451,6 +448,7 @@ footer ul li a:hover {
 	height:250px;
 	overflow: hidden;
 	position: relative;
+	z-index: 1;
 	max-width:100%;
 }
 
@@ -476,6 +474,13 @@ footer ul li a:hover {
 	width:320px;
 }
 
+#membership-header{
+	font-size:48px;
+	width:320px;
+
+}
+
+
 .filter{
 	background: #942D2D;
 	opacity:0.5;
@@ -488,13 +493,13 @@ footer ul li a:hover {
 }
 
 .facilities-intro{
-	height:250px;
+	height:100%;
 	width:100%;
 }
 
 .facilities-intro p {
 	width:75%;
-	padding-top: 90px;
+	padding-top: 45px;
 	margin:0px auto;
 	font-family: HelveticaNeue-light,helvetica,sans-serif;
 	font-weight: lighter;
@@ -502,5 +507,330 @@ footer ul li a:hover {
 	color:#454545;
 }
 
+.gallery{
+	height:100%;
+	width:100%;
+	padding:0px;
+	margin:0px auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#middle-row{
+	width:100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.gallery-image-container{
+	flex-grow: 1;
+	width: 50%;
+	min-width: 300px;
+	height:300px;
+	overflow: hidden;
+	text-align: center;
+	margin:3px;
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+}
+
+.gallery-image-container-third{
+	flex-grow: 2;
+	max-width: 100%;
+	min-width: 300px;
+	height:300px;
+	overflow: hidden;
+	text-align: center;
+	background:orange;
+	margin:3px;
+	opacity: 1;
+	transition: all 0.4s ease-in-out;
+}
+
+.gallery-image-container:hover, .gallery-image-container-third:hover{
+	opacity: 0.9;
+}
+
+.gallery-header{
+	position: relative;
+	top:100px;
+	text-align: center;
+	color:white;
+	font-family: HelveticaNeue-light,helvetica,sans-serif;
+	font-size: 36px;
+}
+
+.gallery-text{
+	position: relative;
+	top:120px;
+	text-align: center;
+	color:white;
+	font-size: 18px;
+	font-family: HelveticaNeue-light,helvetica,sans-serif;
+	cursor: pointer;
+	padding:10px;
+}
 
 
+/* GALLERY IMAGE BACKGROUND*/
+		/* POWERLIFTING*/
+#gallery-1{
+	background-image: url("../images/pexels-photo-1552252.jpeg");
+	background-repeat: no-repeat;
+  	background-position: bottom;
+  	background-size:cover;
+}
+		/* MACHINE ROOM*/
+#gallery-2{
+	background-image: url("../images/pexels-photo-136404.jpeg");
+	background-repeat: no-repeat;
+  	background-position: 0px 0px;
+  	background-size:cover;
+}
+		/* WEIGHT ROOM*/
+#gallery-3{
+	background-image: url("../images/pexels-photo-416717.jpeg");
+	background-repeat: no-repeat;
+  	background-position: left;
+  	background-size:cover;
+}
+		/* WELLNESS*/
+#gallery-4{
+	background-image: url("../images/pexels-photo-917732.jpeg");
+	background-repeat: no-repeat;
+  	background-position: right;
+  	background-size:cover;
+}
+		/* PT CLASSES*/
+#gallery-5{
+	background-image: url("../images/athlete-crossfit-exercise-685533.jpg");
+	background-repeat: no-repeat;
+  	background-position: 0px 0px;
+  	background-size:cover;
+}
+		/* CROSSFIT*/
+#gallery-6{
+	background-image: url("../images/ropes.jpeg");
+	background-repeat: no-repeat;
+  	background-position: 0px 0px;
+  	background-size:cover;
+}
+		/* BOXING*/
+#gallery-7{
+	background-image: url("../images/kickboxer-girl-moscow-thai-161017.jpeg");
+	background-repeat: no-repeat;
+  	background-position: center;
+  	background-size:cover;
+}
+
+
+.facilities-content{
+	height:100%;
+	width:100%;
+	background:#454545;
+}
+
+.join-today{
+	width:90%;
+	height:250px;
+	margin: 0px auto;
+	background: #F1F1F1;
+	position: relative;
+	top: 55px;
+}
+
+.join-today-text{
+	width:70%;
+	min-width: 300px;
+	height: 100%;
+}
+
+.join-today-text h2{
+	font-size:36px;
+	color:#454545;
+	text-align: center;
+	position: relative;
+	top:60px;
+}
+
+.join-today-text p {
+	color:#454545;
+	text-align: center;
+	position: relative;
+	top:35px;
+}
+
+.discover-more{
+	width:220px;
+	height:40px;
+	background:#F1F1F1; 
+	border:2px solid #842F30;
+	font-size:16px;
+	color:#842F30;
+	position: relative;
+	margin-top:40px;
+	transition: all 0.2s ease-in-out 0s;
+}
+
+.discover-more:hover{
+	width:220px;
+	height:40px;
+	background:#842F30; 
+	border:2px solid #842F30;
+	font-size:16px;
+	color:#F1F1F1;
+	position: relative;
+	margin-top:40px;
+}
+
+#join-image{
+	float:right;
+	height:100%;
+	position: absolute;
+	top:0px;
+	right:0px;
+}
+
+.faq-container{
+	width:50%;
+	margin:100px auto 0px auto;
+	padding-bottom: 40px;
+}
+.faq-container h3{
+	color:#B9B9B9;
+	text-align: center;
+}
+
+.faq-flex{
+	padding:0px;
+}
+
+.faq-list-closed{
+	height:50px;
+	background: #842F30;
+	color: #DBDBDB;
+	overflow: hidden;
+	margin:5px;
+	text-decoration: none;
+	font-weight: lighter;
+	font-size: 18px;
+	text-align: left;
+	padding-left:20px;
+}
+.faq-list-open{
+	height:100%;
+	transition: 1s ease-in-out;
+}
+.plus-icon{
+	color:white;
+	font-size:24px;
+	text-align: right;
+	position: relative;
+	top:-50px;
+	right:30px;
+	cursor:pointer;
+}
+
+/* MEMBERSHIP PAGE */
+
+#membership-flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+
+}
+
+.membership-container{
+	margin:10px;
+	height:600px;
+	max-width:30%;
+	min-width:400px;
+	flex-basis: auto;
+	align-self: flex-start;
+}
+
+.membership-image{
+	height:200px;
+	background: red;
+}
+
+#bronze-membership-img{
+	background-image: url(../images/biceps.jpeg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0px 0px;
+}
+
+#silver-membership-img{
+	background-image: url(../images/pexels-photo-136404.jpeg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0px 0px;
+}
+
+#gold-membership-img{
+	background-image: url(../images/tyre.jpeg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0px 0px;
+}
+
+.membership-text{
+	background: #F1F1F1;
+	height:350px;
+	padding:5px;
+	color:#7B7B7B;
+	text-align: left;
+	line-height: 1.5;
+	font-family: "HelveticaNeue-CondensedBold",helvetica,arial,sans-serif;
+	position: relative;
+}
+
+.membership-color{
+	width:100%;
+	height:40px;
+	color:#F5F5F5;
+	font-family: "HelveticaNeue-CondensedBold",helvetica,arial,sans-serif;
+	font-size: 18px;
+	font-weight: lighter;
+	line-height: 2.2;
+}
+
+#bronze-membership{
+background:#674500;
+}
+
+#silver-membership{
+background:#454545;
+}
+
+#gold-membership{
+background:#94712D;
+}
+
+.price{
+	text-align: center;
+	font-size:24px;
+	position: absolute;
+ 	bottom: 0px;
+ 	left:150px;
+  	margin-right:-50px;
+  	width:100px;
+  	background:#F1F1F1;
+}
+
+.linebreak-price{
+	height: 2px;
+	background:#D1D1D1;
+	width:80%;
+	margin:0px auto;
+	position: absolute;
+	bottom:40px;
+	left:10%;
+
+}

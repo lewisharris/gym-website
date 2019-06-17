@@ -25,11 +25,10 @@ function menuToggle(){
 		hamburger.className = 'hamburgerContainer';
 		menuOverlay.className = "";
 		overlay.className = "";
-	}
+	};
 };
 hamburger.addEventListener('click',menuToggle);
-
-
+menuOverlay.addEventListener('click', menuToggle);
 closeMenuIcon.addEventListener('click', menuToggle);
 
 
@@ -52,4 +51,11 @@ function showImage()	{
 	setTimeout(showImage,2000);
 }
 
+//FAQ toggle
+
+var faqList = document.querySelectorAll('.faq-list-closed');
+
+faqList.addEventListener('click',function(){
+	alert('Hi');
+});
 
