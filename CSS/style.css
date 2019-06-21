@@ -65,10 +65,7 @@ body.fade {
 	float:right;
 	position: relative;
 	margin-left:20px;
-	transition: all 0.2s ease-in-out 0s;
-	transform:rotate(540deg);
-	transform-origin: center;
-	transition: all 0.5s ease-in-out 0s;
+	opacity: 0;
 }
 
 #menuoverlay{
@@ -79,8 +76,8 @@ body.fade {
 	right:0;
 	margin:0px auto;
 	overflow:hidden;
-	transform:translateX(800px);
-	display: none;
+	opacity:0;
+	transition: all 0.5s linear;
 }
 
 
@@ -94,7 +91,8 @@ body.fade {
 	z-index: 4;
 	margin:0px auto;
 	overflow:hidden;
-	transform:translateX(0px);
+	opacity: 1;
+
 }
 
 #overlay{
@@ -102,21 +100,18 @@ body.fade {
 	width:100%;
 	height:100%;
 	margin:0px auto;
-	opacity:1;
+	opacity:0;
 	z-index:-5;
 	position: fixed;
 	top:0;
-	left:50000;
-	transition:opacity 10ms linear;
-	transform:translateX(10000px);
 
 }
 
 #overlay.open{ 
 	opacity:0.9;
+	width:100%;
 	z-index:3;
-	transform:translateX(0px);
-	transition: translateX() 0.5s;
+	display: inline;
 
 }
 
@@ -129,8 +124,7 @@ body.fade {
 	top:10px;
 	right:50px;
 	text-align: right;
-	transform:translateX(00px);
-	transition: all 1s ease-in-out 1s;
+	transition: all 0.5s linear;
 }
 
 #openmenu ul{
@@ -250,7 +244,7 @@ nav{
 }
 
 .slideImage{
-		display:none;
+		display: none;
 		position: relative;
 }
 
@@ -295,17 +289,18 @@ nav{
 
 .main-content{
 	width:100%;
-	height:270px;
+	height:260px;
 	position: relative;
 	margin:0px auto;
 	display: flex;
 	justify-content: space-between;
-	flex: 1 1 160px;
+
 }
 
 .clickableContainer{
 	height:100%;
 	width:400px;
+	margin:5px;
 	background: #F1F1F1;
 	text-align: center;
 	transition: background-color 0.3s;
@@ -315,7 +310,7 @@ nav{
 
 
 .clickableContainer:hover{
-	background:#454545;
+	background:#D3D3D3;
 	color:#F1F1F1;
 	transition: background-color 0.3s;
 	cursor:pointer;
@@ -325,6 +320,9 @@ nav{
 	height:50px;
 	line-height: 1.5;
 	margin:0 auto;
+	color:#7B7B7B;
+	font-family: "HelveticaNeue-CondensedBold",helvetica,arial,sans-serif;
+	font-size:16px;
 }
 
 
@@ -339,6 +337,11 @@ nav{
 	transition: opacity 1s;
 }
 
+.mobile-text{
+	display: none;
+	}
+
+
 			/* ------FOOTER-----*/
 
 footer{
@@ -350,8 +353,6 @@ footer{
 	width: 100%;
 	margin:0px auto;
 	height:50px;
-	position: relative;
-	bottom:0px;
 }
 
 footer ul li {
@@ -373,74 +374,6 @@ footer ul li a:hover {
 }
 
 
-/* MOBILE AND RESPONSIVE */
-
-@media (max-width:768px){
-
-	#navbar{
-		display: none;
-	}
-
-	.container{
-		height:200px;
-	}
-
-	#showcase img {
-		width:100%;
-		position: relative;
-		bottom:25px;
-	}
-
-	#showcase .imageheader{
-		opacity:0;
-	}
-	#showcase .imagetext{
-		opacity:0;
-	}
-
-	#searchbarposition{
-		display: none;
-	}
-
-
-	header{
-		padding-top:36px;
-		height:80px;
-	}
-
-	header h1{
-		width:75%;
-		font-size: 24px;
-		line-height:1;
-		margin:0px;
-	}
-
-	header h3{
-		width:75%;
-		font-size: 14px;
-		line-height:1;
-		margin:0px;
-	}
-
-	.hamburgerContainer{
-		position: absolute;
-		float:right;
-		top:0px;
-		right: -20px;
-	}
-	.main-content{
-		width:100%;
-		margin:auto;
-	}
-	.circle{
-		width:10px;
-		height:10px;
-	}
-	#circles{
-		margin:10px auto 10px auto;
-	}
-}
-
 	/* ------------------- FACILITIES PAGE ------------- */
 
 .sub-head-block{
@@ -456,7 +389,7 @@ footer ul li a:hover {
 	width:100%;
 	min-height: 100%;
 	position: relative;
-	top:-50px;
+	top:0px;
 	z-index:1;
 }
 
@@ -476,7 +409,7 @@ footer ul li a:hover {
 
 #membership-header{
 	font-size:48px;
-	width:320px;
+	width:322px;
 
 }
 
@@ -574,7 +507,6 @@ footer ul li a:hover {
 	cursor: pointer;
 	padding:10px;
 }
-
 
 /* GALLERY IMAGE BACKGROUND*/
 		/* POWERLIFTING*/
@@ -677,14 +609,9 @@ footer ul li a:hover {
 }
 
 .discover-more:hover{
-	width:220px;
-	height:40px;
 	background:#842F30; 
-	border:2px solid #842F30;
-	font-size:16px;
 	color:#F1F1F1;
-	position: relative;
-	margin-top:40px;
+
 }
 
 #join-image{
@@ -717,14 +644,13 @@ footer ul li a:hover {
 	margin:5px;
 	text-decoration: none;
 	font-weight: lighter;
+	letter-spacing: 1.2;
 	font-size: 18px;
 	text-align: left;
-	padding-left:20px;
+	padding:0px 10px 0px 10px;
+	transition: height 0.2s linear;
 }
-.faq-list-open{
-	height:100%;
-	transition: 1s ease-in-out;
-}
+
 .plus-icon{
 	color:white;
 	font-size:24px;
@@ -742,21 +668,22 @@ footer ul li a:hover {
 	flex-direction: row;
 	justify-content: center;
 	flex-wrap: wrap;
+	margin-bottom:100px;
 
 }
 
 .membership-container{
-	margin:10px;
+	margin:0px 10px 60px 10px;
 	height:600px;
+	padding:0px;
 	max-width:30%;
-	min-width:400px;
+	min-width:300px;
 	flex-basis: auto;
 	align-self: flex-start;
 }
 
 .membership-image{
 	height:200px;
-	background: red;
 }
 
 #bronze-membership-img{
@@ -782,7 +709,7 @@ footer ul li a:hover {
 
 .membership-text{
 	background: #F1F1F1;
-	height:350px;
+	height:370px;
 	padding:5px;
 	color:#7B7B7B;
 	text-align: left;
@@ -818,8 +745,8 @@ background:#94712D;
 	font-size:24px;
 	position: absolute;
  	bottom: 0px;
- 	left:150px;
-  	margin-right:-50px;
+ 	left:50%;
+  	margin-left:-50px;
   	width:100px;
   	background:#F1F1F1;
 }
@@ -832,5 +759,324 @@ background:#94712D;
 	position: absolute;
 	bottom:40px;
 	left:10%;
+}
+
+
+/* MOBILE AND RESPONSIVE MAIN */
+
+@media (max-width:768px){
+
+	#navbar{
+		width:50px;
+		height:50px;
+	}
+
+	.hide-on-mobile{
+		opacity: 0;
+	}
+
+	.container{
+		height:220px;
+	}
+
+	#showcase img {
+		width:100%;
+		position: relative;
+		bottom:25px;
+	}
+
+	#showcase .imageheader{
+		opacity:0;
+	}
+	#showcase .imagetext{
+		opacity:0;
+	}
+
+
+	header{
+		height:100px;
+		padding:0px;
+		position: absolute;
+		top:0px;
+
+	}
+
+	header h1{
+		font-size: 24px;
+		position: absolute;
+		left:-40px;
+		top:-5px;
+	}
+
+
+	header h2{
+		font-size: 16px;
+		line-height:1;
+		margin:0px;
+		position: absolute;
+		left:-40px;
+		top:45px;
+
+	}
+
+	.hamburgerContainer{
+		float:right;
+		position: absolute;
+		top:35px;
+		right:15px;
+	}
+
+	.hamburgerContainerGone{
+		opacity: 0;
+	}
+
+
+	#overlay.open{
+		opacity: 1;
+		width:100%;
+		position: absolute;
+		right:0px;
+	}
+
+
+	.main-content{
+		width:100%;
+		margin:auto;
+	}
+
+	.clickableContainer{
+		display: none;
+	}
+
+	.mobile-text{
+		display: block;
+		width:90%;
+		height:100%;
+		margin:5px auto 5px auto;
+		font-family: HelveticaNeue-light,helvetica,sans-serif;
+		font-weight: lighter;
+		font-size:16px;
+		color:#454545;
+		text-align: left;
+	}
+
+	#mobile-image{
+		max-width:100%;
+	}
+	.faq-container{
+		margin:10px auto;
+		width:100%;
+		height:100%;
+
+	}
+	.faq-flex{
+		width:100%;
+		margin-top:40px;
+	}
+	.faq-list-closed{
+	padding-left:20px;
+	padding-right:20px;
+
+	}
+
+
+	.join-today{
+		width:100%;
+		height:250px;
+		margin: 0px auto;
+		background: #F1F1F1;
+		position: relative;
+		top: 42px;
+	}
+
+	.join-today-text{
+		width:100%;
+		min-width: 300px;
+		height: 100%;
+	}
+
+	.join-today-text h2{
+		font-size:36px;
+		color:#454545;
+		text-align: center;
+		position: relative;
+		top:60px;
+	}
+
+	.join-today-text p {
+		color:#454545;
+		text-align: center;
+		position: relative;
+		top:35px;
+	}
+
+
+	#join-image{
+		display: none;
+	}
+
+	#membership-flex{
+		margin:0px;
+		padding:0px;
+		width: 100%;
+		display: inline-block; 
+	}
+
+	.membership-container{
+		margin:0px;
+		height:100%;
+		padding:0px;
+		margin-bottom:10px;
+		min-width:100%;
+
+	}
+	.membership-text{
+		padding-left:20px;
+		height:330px;
+	}
+	#bronze-membership-text{
+		height:200px;
+	}
+
+	.membership-image{
+		max-width: 100%;
+	}
+	.price{
+		margin:0px auto;
+		bottom:22px;
+		left:50%;
+		margin-left:-15%;
+		width:30%;
+	}
+
+	.membership-text ul{
+		text-align: center;
+		padding:0px;
+		margin:0px;
+	}
+
+	.membership-text ul li{
+		height:100%;
+		list-style-type: none;
+		text-align: center;
+		padding:0px;
+		margin:0px;
+	}
+
+
+
+	.linebreak-price{
+		height: 2px;
+		background:#D1D1D1;
+		width:80%;
+		margin:0px auto;
+		position: absolute;
+		bottom:40px;
+		left:10%;
+	}
+
+	footer{
+		display: none;
+	}
+}
+
+@media only screen and (min-device-width: 1024px) 
+and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) 
+ and (orientation: portrait)  {
+
+
+.membership-container{
+	width:100%;
+	max-width: 90%;
+	display: flex;
+	height:100%;
+	flex-direction: column;
+	overflow: hidden;
+ }
+
+	.membership-text{
+		padding-left:20px;
+		font-size:18px;
+		padding-bottom: 0px;
+		display: inline-block;
+		width:100%;
+	}
+
+	.membership-text ul{
+		text-align: center;
+		padding:0px;
+		margin:0px;
+	}
+
+	.membership-text ul li{
+		height:100%;
+		list-style-type: none;
+		text-align: center;
+		padding:0px;
+		margin:0px;
+	}
+
+	.membership-image{
+		max-width: 100%;
+	}
+
+	.price{
+		margin:0px auto;
+		bottom:22px;
+		left:50%;
+		margin-left:-10%;
+		width:20%;
+	}
+
+	#bronze-membership-img{
+		background-image: url(../images/biceps.jpeg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: 0px -100px;
+	}
+
+	#silver-membership-img{
+		background-image: url(../images/pexels-photo-136404.jpeg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: 0px -200px;
+	}
+
+	#gold-membership-img{
+		background-image: url(../images/tyre.jpeg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: 0px 0px;
+	}
+
+	#bronze-membership-text{
+		height:200px;
+	}
+
+	.main-content{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		height:100%;
+	}
+
+	.clickableContainer{
+		min-width:100%;
+	}
+
+	.contentImage{
+		height:300px;
+	}
+
+	.caption{
+		height:40px;
+		font-size: 24px;
+		line-height: 0.7;
+	}
+	footer{
+		position: relative;
+		bottom:20px;
+	}
+
 
 }

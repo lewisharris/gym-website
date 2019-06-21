@@ -11,11 +11,11 @@
 var hamburger = document.getElementsByClassName('hamburgerContainer')[0];
 var menuOverlay = document.getElementById('menuoverlay');
 var overlay = document.getElementById('overlay');
-var closeMenuIcon = document.getElementById('closemenuicon');
 
 
 
-function menuToggle(){
+
+function menuToggle(e){
 	if(hamburger.className == 'hamburgerContainer'){
 	hamburger.className = 'hamburgerContainerGone';
 	menuOverlay.className = "open";
@@ -29,8 +29,11 @@ function menuToggle(){
 };
 hamburger.addEventListener('click',menuToggle);
 menuOverlay.addEventListener('click', menuToggle);
-closeMenuIcon.addEventListener('click', menuToggle);
 
+
+//Code below here will only run on the home page  (held inside if statement)
+
+if (document.title == 'Main Street Gym') {
 
 //Slideshow//
 
@@ -51,11 +54,27 @@ function showImage()	{
 	setTimeout(showImage,2000);
 }
 
+};
+
+
+//Code below here will only run on the facilities page  (held inside if statement)
+
+if (document.title == 'Facilities') {
 //FAQ toggle
+const faqList = document.querySelectorAll('.faq-list-closed');
+const plusIcon = document.querySelectorAll('.plus-icon');
 
-var faqList = document.querySelectorAll('.faq-list-closed');
+for(i=0;i<faqList.length;i++){
+	faqList[i].addEventListener('click',function(){
+		var current = this;
+		if(current.style.height == '350px'){
+			current.style.height = '';
+		}
+		else{
+			current.style.height = '350px';
+		}
+		});
+	}
 
-faqList.addEventListener('click',function(){
-	alert('Hi');
-});
 
+};
