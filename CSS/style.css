@@ -1,7 +1,9 @@
 @font-face { font-family: Delicious; src: url('Delicious-Roman.otf'); } 
 @font-face { font-family: Delicious; font-weight: bold; src: url('Delicious-Bold.otf'); }
 
-
+a{
+	text-decoration: none;
+}
 /*-------------- INDEX.HTML -----------------*/
 html,body{
 	margin:0px auto;
