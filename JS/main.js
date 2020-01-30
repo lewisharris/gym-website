@@ -60,21 +60,38 @@ function showImage()	{
 //Code below here will only run on the facilities page  (held inside if statement)
 
 if (document.title == 'Facilities') {
-//FAQ toggle
-const faqList = document.querySelectorAll('.faq-list-closed');
-const plusIcon = document.querySelectorAll('.plus-icon');
+	//FAQ toggle
+	const faqList = document.querySelectorAll('.faq-list-closed');
+	const plusIcon = document.querySelectorAll('.plus-icon');
 
-for(i=0;i<faqList.length;i++){
-	faqList[i].addEventListener('click',function(){
-		var current = this;
-		if(current.style.height == '350px'){
-			current.style.height = '';
-		}
-		else{
-			current.style.height = '350px';
-		}
-		});
-	}
+	faqList.forEach(function(faqList,index){
+		var i = index;
+		faqList.addEventListener('click', function(){
+			if(faqList.style.height == '350px'){
+				faqList.style.height = '';
+				plusIcon[i].innerHTML = '+';
+			}
+			else{
+				faqList.style.height = '350px';
+				plusIcon[i].innerHTML = '-';
+			}
+		})
+
+	})
+		
+
+
+		/*
+		console.log(this)
+		if(this.style.height == '350px'){
+			this.style.height = '';
+			this.innerHTML = '+';
+			}
+			else{
+				this.style.height = '350px';
+				this.innerHTML = '+';
+			}
+		*/
 
 
 };
